@@ -1,0 +1,8 @@
+---
+ - name: collect information in new prod
+   hosts: all
+   tasks:
+    - name: this is the info we have collected from hosts
+      debug:
+       msg: my name is {{ ansible_facts['hostname'] }} & my OS {{ ansible_facts['kernel'] }}
+
